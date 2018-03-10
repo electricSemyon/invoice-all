@@ -1,2 +1,4 @@
 node_modules
 invoices.sqlite
+.idea
+public/js/bundle.js

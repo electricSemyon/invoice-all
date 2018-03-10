@@ -1,0 +1,58 @@
+.main-content-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  max-width: 1170px;
+  width: 100%;
+  padding: 16px;
+}
+
+
+
+
+
+.invoices-page {
+  /*padding: 32px;*/
+}
+
+.invoice-list {
+  margin-top: 32px;
+}
+
+.invoice-list .invoice-card:not(:last-child) {
+  margin-bottom: 21px;
+}
+
+.invoice-card-content {
+  margin-top: 8px;
+}
+
+.invoice-card {
+  padding: 16px;
+  position: relative;
+  box-shadow: 1px 1px 3px 1px #ccc;
+}
+
+.invoice-card p span {
+  font-weight: bold;
+  color: #999;
+}
+
+.invoice-card .invoice-card-id {
+  color: #fff;
+  background-color: #5d9ce4;
+  padding: 1px 9px;
+  position: absolute;
+  top: -9px;
+  left: 16px;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  font-weight: bold;
+}
+
+.invoice-card .invoice-card-total {
+  right: 16px;
+  position: absolute;
+  top: 16px;
+}
