@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "PROD=true webpack && node app",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server --hot"
   },
   "dependencies": {
     "axios": "^0.18.0",
