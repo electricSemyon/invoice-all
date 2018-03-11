@@ -1,3 +1,9 @@
+### Bonus deliverables
+
+- From the invoice form, make it possible to add a new Customer that is not already in the system. It should be possible to add a name and all other fields.
+- Create a page that lists existing customers with the ability to edit them
+- Create a page that lists existing products with the ability to edit them
+
 # Dependencies
 
 - sqlite3
