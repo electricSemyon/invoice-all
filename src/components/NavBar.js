@@ -23,13 +23,13 @@ const NavBar = () => (
       <div id="navbar" className="navbar-collapse collapse">
         <ul className="nav navbar-nav">
           <li>
-            <Link to="/">Products</Link>
+            <Link to="/products">Products</Link>
           </li>
           <li>
             <Link to="/customers">Customers</Link>
           </li>
           <li>
-            <Link to="/">Invoices</Link>
+            <Link to="/invoices">Invoices</Link>
           </li>
         </ul>
       </div>

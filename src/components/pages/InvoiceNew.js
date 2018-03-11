@@ -8,7 +8,7 @@ import {extractOption,} from '../../utils/newInvoiceUtils';
 import validate from '../../utils/validateNewInvoice';
 
 import Select from '../Select';
-import ProductsTable from '../ProductsTable';
+import ProductsTable from '../SelectedProductsTable';
 
 class NewInvoice extends React.Component {
   constructor(props) {
@@ -81,6 +81,10 @@ class NewInvoice extends React.Component {
             label="Customer"
             onChange={this.handleUpdateCustomer}
           />}
+
+          <div className="no-margin">
+            <Link to="/customers/new">Add consumer</Link>
+          </div>
 
           <ProductsTable products={newInvoice.selectedProducts} onProductEdit={editProduct}/>
 

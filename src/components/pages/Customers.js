@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import InvoiceList from '../InvoiceList';
 import {fetchCustomers, editCustomer} from "../../actions/invoiceFormData";
 import UserTable from '../UsersTable';
 
@@ -17,6 +16,8 @@ class CustomersPage extends React.Component {
 
     return (
       <div className="customer-page main-content">
+        <Link to="/customers/new">Create customer</Link>
+
         {customers && customers.length
           ? <UserTable users={customers} onUserEdit={onUserEdit}/>
           : <div>There are no customers</div>}
