@@ -1,0 +1,1 @@
+export default (...fields) => fields.reduce((acc, field) => (acc || (!isNaN(field) && !field)) ? 'One of fields is not valid.' : null, null);

@@ -42,8 +42,11 @@ module.exports = {
     historyApiFallback: true,
     port: PORT,
     host: HOST,
-    headers: {
-      'Access-Control-Allow-Origin': '*'
+    proxy: {
+      "/api": {
+        "target": "http://localhost:8000",
+        "secure": false
+      }
     }
   },
   plugins: [

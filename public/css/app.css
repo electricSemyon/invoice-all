@@ -1,3 +1,7 @@
+table {
+  table-layout: fixed;
+}
+
 .main-content-wrapper {
   display: flex;
   justify-content: center;
@@ -10,7 +14,9 @@
 }
 
 
-
+.invoice-form-wrapper > div:not(.no-margin) {
+  margin-top: 24px;
+}
 
 
 .invoices-page {
@@ -55,4 +61,36 @@
   right: 16px;
   position: absolute;
   top: 16px;
+}
+
+
+.products-table td {
+  padding: 6px 0;
+}
+
+.products-table table {
+  margin-bottom: 4px;
+}
+
+.form-group.select {
+  width: 100%;
+}
+
+.add-product {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.add-product .form-group {
+  margin-bottom: 0;
+}
+
+.add-product button {
+  height: 32px;
+  margin-left: 12px;
+}
+
+.editable-text {
+  cursor: pointer;
 }

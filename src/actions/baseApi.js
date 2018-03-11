@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseApiUrl = 'http://localhost:8000/api';
+const baseApiUrl = '/api';
 
 export const get = url => axios.get(`${baseApiUrl}/${url}`)
   .then(res => res.data);

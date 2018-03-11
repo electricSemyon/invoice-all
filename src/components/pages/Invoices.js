@@ -1,52 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 import InvoiceList from '../InvoiceList';
+import {fetchInvoices} from "../../actions/invoiceList";
 
-const invoices = [
-  {
-    id: 211337,
-    customer_id: 231123,
-    discount: 13.5,
-    total: 999
-  },
-  {
-    id: 1233,
-    customer_id: 123123,
-    discount: 14.1,
-    total: 1244
-  },
-  {
-    id: 1233,
-    customer_id: 123123,
-    discount: 14.1,
-    total: 1244
-  },
-  {
-    id: 1233,
-    customer_id: 123123,
-    discount: 14.1,
-    total: 1244
-  },
-  {
-    id: 1233,
-    customer_id: 123123,
-    discount: 14.1,
-    total: 1244
-  },
-  {
-    id: 1233,
-    customer_id: 123123,
-    discount: 14.1,
-    total: 1244
+class InvoicesPage extends React.Component {
+  componentDidMount() {
+    this.props.fetchInvoices();
   }
-];
 
-const InvoicesPage = () => (
-  <div className="invoices-page main-content">
-    <Link to="/invoices/new">Create invoice</Link>
+  render() {
+    const {invoiceList} = this.props;
 
-    <InvoiceList list={invoices} />
-  </div>
-);
+    return (
+      <div className="invoices-page main-content">
+        <Link to="/invoices/new">Create invoice</Link>
 
-export default InvoicesPage;
+        {invoiceList.length
+          ? <InvoiceList list={invoiceList}/>
+          : <div>There are no invoices yet</div>}
+      </div>
+    )
+  }
+}
+
+export default connect(
+  store => ({
+    invoiceList: store.invoiceList.invoices,
+  }),
+  dispatch => ({
+    fetchInvoices: () => dispatch(fetchInvoices()),
+  })
+)(InvoicesPage);
